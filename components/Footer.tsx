@@ -93,7 +93,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.0.0&nbsp;&nbsp;|&nbsp;&nbsp;July 1, 2026
+          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.0.0&nbsp;&nbsp;|&nbsp;&nbsp;July 23, 2026
         </p>
       </div>
     </footer>
