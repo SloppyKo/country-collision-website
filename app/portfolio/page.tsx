@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Dodge Cummins Full Restoration",
     tags: ["Custom Paint", "Body Work", "Color Matching"],
-    description: "Brought a totaled second gen (01) Dodge Cummins back to life with a ground up restoration and custom build.",
+    description: "Brought a totaled second gen Dodge Cummins back to life with a ground up restoration and custom build.",
     layout: "collage" as const,
     galleries: [
       {
