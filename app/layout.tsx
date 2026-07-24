@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Country Collision — Placeholder Title",
-  description: "Collision Repair, Custom Paint, and Auto Restoration.",
+  title: "Country Collision — Collision Repair, Custom Paint & Auto Restoration in Hanford, CA",
+  description: "Collision Repair, Custom Paint, and Auto Restoration in Hanford California.",
 };
 
 export default function RootLayout({

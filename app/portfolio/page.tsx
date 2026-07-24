@@ -3,8 +3,9 @@ import ContactButton from "@/components/ContactButton";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Placeholder Title",
-  description: "Placeholder description for the Country Collision portfolio.",
+  title: "Portfolio — Country Collision | Hanford, CA",
+  description:
+    "See our collision repair, custom paint, and restoration work from Country Collision in Hanford, California.",
 };
 
 const projects = [
