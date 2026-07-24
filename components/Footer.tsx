@@ -85,7 +85,7 @@ export default function Footer() {
       <div className="flex flex-col items-center gap-2 pb-5 pt-6">
         <a href="https://www.sloppyko.com" target="_blank" rel="noopener noreferrer">
           <Image
-            src="/images/sloppyko.png"
+            src="/images/bs_white.png"
             alt="SloppyKo Creative Studio"
             width={24}
             height={32}
@@ -93,7 +93,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.0.0&nbsp;&nbsp;|&nbsp;&nbsp;July 23, 2026
+          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.0.1&nbsp;&nbsp;|&nbsp;&nbsp;July 23, 2026
         </p>
       </div>
     </footer>

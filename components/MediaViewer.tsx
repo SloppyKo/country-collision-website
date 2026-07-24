@@ -86,6 +86,7 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
             src={current.imageSrc}
             alt={current.label}
             fill
+            sizes="(min-width: 768px) 33vw, 100vw"
             className="rounded-lg object-cover"
           />
         </button>
@@ -133,7 +134,7 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
             type="button"
             aria-label="Close"
             onClick={() => setExpanded(false)}
-            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110"
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110"
           >
             ×
           </button>
@@ -146,7 +147,7 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
                 e.stopPropagation();
                 goTo(-1);
               }}
-              className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110 md:left-6"
+              className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110 md:left-6"
             >
               ‹
             </button>
@@ -160,6 +161,8 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
               src={current.imageSrc}
               alt={current.label}
               fill
+              sizes="100vw"
+              quality={90}
               className="object-contain"
             />
           </div>
@@ -172,7 +175,7 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
                 e.stopPropagation();
                 goTo(1);
               }}
-              className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110 md:right-6"
+              className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-xl text-foreground transition-transform hover:scale-110 md:right-6"
             >
               ›
             </button>

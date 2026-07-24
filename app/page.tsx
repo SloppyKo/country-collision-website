@@ -38,6 +38,7 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover opacity-[0.7]"
         />
 
@@ -142,6 +143,7 @@ export default function Home() {
               src="/images/levi.PNG"
               alt="Levi Herman"
               fill
+              sizes="(min-width: 768px) 320px, 100vw"
               className="object-cover"
             />
           </div>

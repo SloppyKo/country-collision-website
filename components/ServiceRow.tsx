@@ -77,6 +77,7 @@ export default function ServiceRow({
               src={imageSrc}
               alt={title}
               fill
+              sizes="(min-width: 768px) 36rem, 100vw"
               className="object-cover"
             />
           </div>
