@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Country Collision — Placeholder Title",
-  description: "Placeholder description for Country Collision.",
+  description: "Collision Repair, Custom Paint, and Auto Restoration.",
 };
 
 export default function RootLayout({
