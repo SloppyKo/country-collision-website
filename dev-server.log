@@ -7,3 +7,11 @@
 - Network:       http://172.16.226.195:3000
 ✓ Ready in 1074ms
 
+ GET / 200 in 3.2s (next.js: 2.8s, application-code: 415ms)
+ GET / 200 in 73ms (next.js: 7ms, application-code: 65ms)
+ GET / 200 in 65ms (next.js: 5ms, application-code: 60ms)
+ GET / 200 in 67ms (next.js: 7ms, application-code: 60ms)
+ GET / 200 in 324ms (next.js: 86ms, application-code: 237ms)
+[browser] Image with src "/images/white truck body work.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[browser] Image with src "/images/meyers max paint.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+[browser] Image with src "/images/truck bed/truck bed.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
