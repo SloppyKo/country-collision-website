@@ -15,3 +15,5 @@
 [browser] Image with src "/images/white truck body work.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
 [browser] Image with src "/images/meyers max paint.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
 [browser] Image with src "/images/truck bed/truck bed.png" has "fill" and a height value of 0. This is likely because the parent element of the image has not been styled to have a set height.
+ GET / 200 in 259ms (next.js: 150ms, application-code: 109ms)
+ GET / 200 in 53ms (next.js: 7ms, application-code: 46ms)

@@ -15,8 +15,8 @@ const services = [
   {
     title: "Custom Paint & Paint Repair",
     description: "Clean paintwork, accurate matching, and custom finishes.",
-    imageLabel: "meyers max paint.png",
-    imageSrc: "/images/meyers max paint.png",
+    imageLabel: "meyers_max_paint.png",
+    imageSrc: "/images/meyers_max_paint.png",
   },
   {
     title: "Auto Restoration & Custom Builds",
