@@ -17,6 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.countrycollisionhanford.com"),
   title: "Country Collision — Collision Repair, Custom Paint & Auto Restoration in Hanford, CA",
   description: "Collision Repair, Custom Paint, and Auto Restoration in Hanford California.",
 };
