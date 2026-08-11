@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FooterContact from "./FooterContact";
 
 const linkClasses =
   "inline-flex items-center gap-1.5 font-body text-sm text-foreground underline underline-offset-4 transition-transform duration-150 hover:scale-105";
@@ -53,6 +54,7 @@ export default function Footer() {
             <br />
             Saturday - Sunday 9am-5pm
           </p>
+          <FooterContact />
         </div>
 
         <div className="flex flex-col items-center">
@@ -93,7 +95,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.2.2&nbsp;&nbsp;|&nbsp;&nbsp;July 28, 2026
+          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.4.0&nbsp;&nbsp;|&nbsp;&nbsp;August 11, 2026
         </p>
       </div>
     </footer>

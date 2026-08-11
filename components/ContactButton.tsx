@@ -2,9 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
-
-const PHONE_DISPLAY = "(559) 670-5889";
-const PHONE_HREF = "tel:+15596705889";
+import { EMAIL_DISPLAY, EMAIL_HREF, PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 
 type ContactButtonProps = {
   label: string;
@@ -18,7 +16,14 @@ export default function ContactButton({
   className = "",
 }: ContactButtonProps) {
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
+
+  function handleEmailClick() {
+    navigator.clipboard?.writeText(EMAIL_DISPLAY).catch(() => {});
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -50,7 +55,7 @@ export default function ContactButton({
       {open && (
         <div
           role="dialog"
-          className="absolute left-1/2 top-full z-50 mt-2 w-56 -translate-x-1/2 rounded-md border border-border bg-surface p-4 text-center shadow-lg"
+          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 rounded-md border border-border bg-surface p-4 text-center shadow-lg"
         >
           <p className="font-heading text-sm text-foreground">Shoot us a text or call</p>
           <a
@@ -59,6 +64,23 @@ export default function ContactButton({
           >
             {PHONE_DISPLAY}
           </a>
+
+          <p className="mt-3 font-heading text-sm text-foreground">Or send an email</p>
+          <a
+            href={EMAIL_HREF}
+            onClick={handleEmailClick}
+            className="mt-2 inline-block break-all font-body text-sm font-medium text-brand underline-offset-4 hover:underline"
+          >
+            {EMAIL_DISPLAY}
+          </a>
+          <p
+            className={`mt-1 font-body text-xs text-muted transition-opacity ${
+              copied ? "opacity-100" : "opacity-0"
+            }`}
+            aria-live="polite"
+          >
+            Copied to clipboard
+          </p>
         </div>
       )}
     </div>
