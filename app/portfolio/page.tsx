@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactButton from "@/components/ContactButton";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -104,14 +105,14 @@ const projects = [
     ],
   },
   {
-    title: "OBS Chevy Paint Job",
+    title: "OBS Chevy, Peterbilt, and Trailer Paint Job",
     tags: ["Custom Paint", "Rust Repair", "Color matching"],
     description:
-      "Minor body work and restored the orignal baby blue paint on a 1989 Chevy OBS short bed pickup truck.",
+      "Minor body work and restored the orignal baby blue paint on a 1989 Chevy OBS short bed pickup truck + colormatched custom paint on Peterbilt semi-truck and trailer.",
     layout: "collage" as const,
     galleries: [
       {
-        title: "Before",
+        title: "OBS Before",
         items: [
           {
             label: "OBS before",
@@ -121,7 +122,7 @@ const projects = [
         ],
       },
       {
-        title: "Prep",
+        title: "OBS Prep",
         items: [
           {
             label: "OBS prep",
@@ -131,7 +132,7 @@ const projects = [
         ],
       },
       {
-        title: "Restored",
+        title: "OBS Restored",
         items: [
           {
             label: "OBS final",
@@ -141,22 +142,56 @@ const projects = [
         ],
       },
     ],
+    imageRowTitle: "OBS, Peterbilt, & Trailer Fully Restored",
+    imageRow: [
+      {
+        label: "peterbilt full",
+        imageSrc: "/images/obs repaint/peterbilt full.jpg",
+      },
+      {
+        label: "OBS on trailer",
+        imageSrc: "/images/obs repaint/OBS on trailer.jpg",
+      },
+      {
+        label: "peterbilt side",
+        imageSrc: "/images/obs repaint/peterbilt side.jpg",
+      },
+      {
+        label: "OBS side",
+        imageSrc: "/images/obs repaint/OBS side.jpg",
+      },
+    ],
   },
 ];
 
 export default function Portfolio() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 pb-24 pt-16">
-        <h1 className="font-heading text-3xl text-foreground md:text-5xl">
-          Featured Work
-        </h1>
-        <p className="mt-3 max-w-2xl font-body text-base text-muted">
-          Our most memorable bodywork, custom paint, and restoration projects
-          from Country Collision in Hanford, California.
-        </p>
+      <section className="relative h-[380px] overflow-hidden md:h-[480px]">
+        <Image
+          src="/images/auto-restoration.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-background" />
 
-        <div className="mt-16 flex flex-col gap-20">
+        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-16">
+          <h1 className="font-heading text-3xl text-white md:text-5xl">
+            Featured Work
+          </h1>
+          <p className="mt-3 max-w-2xl font-body text-base text-white/80">
+            Our most memorable bodywork, custom paint, and restoration projects
+            from Country Collision in Hanford, California.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-24 pt-16">
+        <div className="flex flex-col gap-20">
           {projects.map((project, i) => (
             <ProjectCard key={`${project.title}-${i}`} {...project} />
           ))}

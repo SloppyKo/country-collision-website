@@ -34,6 +34,19 @@ function FacebookIcon() {
   );
 }
 
+function YelpIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-4 w-4 shrink-0"
+      aria-hidden="true"
+    >
+      <path d="M12 2l2.9 6.26L21 9.27l-4.5 4.38L17.8 21 12 17.77 6.2 21l1.3-7.35L3 9.27l6.1-1.01L12 2z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="w-full">
@@ -80,6 +93,15 @@ export default function Footer() {
               <FacebookIcon />
               Facebook
             </a>
+            <a
+              href="https://www.yelp.com/biz/country-collision-hanford-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClasses}
+            >
+              <YelpIcon />
+              Yelp
+            </a>
           </div>
         </div>
       </div>
@@ -95,7 +117,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.4.0&nbsp;&nbsp;|&nbsp;&nbsp;August 11, 2026
+          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.5.0&nbsp;&nbsp;|&nbsp;&nbsp;August 17, 2026
         </p>
       </div>
     </footer>

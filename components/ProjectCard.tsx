@@ -17,6 +17,8 @@ type ProjectCardProps = {
   media?: MediaItem[];
   galleries?: Gallery[];
   layout?: "carousel" | "grid" | "collage";
+  imageRow?: MediaItem[];
+  imageRowTitle?: string;
 };
 
 export default function ProjectCard({
@@ -26,6 +28,8 @@ export default function ProjectCard({
   media = [],
   galleries = [],
   layout = "carousel",
+  imageRow,
+  imageRowTitle,
 }: ProjectCardProps) {
   return (
     <article className="rounded-lg border border-border bg-surface p-6">
@@ -69,6 +73,23 @@ export default function ProjectCard({
         </div>
       ) : (
         <MediaViewer items={media} className="mt-6 h-64 w-full md:h-96" />
+      )}
+
+      {imageRow && imageRow.length > 0 && (
+        <div className="mt-6">
+          {imageRowTitle && (
+            <h4 className="font-heading text-lg text-foreground">
+              {imageRowTitle}
+            </h4>
+          )}
+          <MediaViewer
+            items={imageRow}
+            className={`mx-auto w-full max-w-2xl h-64 md:h-[22rem] ${imageRowTitle ? "mt-2" : ""}`}
+            sizes="(min-width: 768px) 42rem, 100vw"
+            quality={90}
+            autoPlay
+          />
+        </div>
       )}
     </article>
   );

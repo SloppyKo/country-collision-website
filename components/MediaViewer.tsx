@@ -14,11 +14,23 @@ type MediaItem = {
 type MediaViewerProps = {
   items: MediaItem[];
   className?: string;
+  sizes?: string;
+  quality?: number;
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
 };
 
-export default function MediaViewer({ items, className = "" }: MediaViewerProps) {
+export default function MediaViewer({
+  items,
+  className = "",
+  sizes = "(min-width: 768px) 33vw, 100vw",
+  quality = 75,
+  autoPlay = false,
+  autoPlayInterval = 4000,
+}: MediaViewerProps) {
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const hasMultiple = items.length > 1;
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -27,6 +39,16 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
   }
 
   const current = items[index];
+
+  useEffect(() => {
+    if (!autoPlay || !hasMultiple || expanded || hovered || current.videoSrc) {
+      return;
+    }
+
+    const id = setInterval(() => goTo(1), autoPlayInterval);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoPlay, autoPlayInterval, hasMultiple, expanded, hovered, index, current.videoSrc]);
 
   useEffect(() => {
     if (!expanded) return;
@@ -62,7 +84,11 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
   }, [current.videoSrc]);
 
   return (
-    <div className={`relative ${className}`}>
+    <div
+      className={`relative ${className}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       {current.videoSrc ? (
         <video
           ref={videoRef}
@@ -86,7 +112,8 @@ export default function MediaViewer({ items, className = "" }: MediaViewerProps)
             src={current.imageSrc}
             alt={current.label}
             fill
-            sizes="(min-width: 768px) 33vw, 100vw"
+            sizes={sizes}
+            quality={quality}
             className="rounded-lg object-cover"
           />
         </button>
