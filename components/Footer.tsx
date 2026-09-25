@@ -21,19 +21,6 @@ function InstagramIcon() {
   );
 }
 
-function FacebookIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="h-4 w-4 shrink-0"
-      aria-hidden="true"
-    >
-      <path d="M13.5 21v-8.06h2.7l.4-3.14h-3.1V7.9c0-.91.25-1.53 1.56-1.53h1.66V3.56C15.87 3.5 14.98 3.4 13.9 3.4c-2.36 0-3.98 1.44-3.98 4.08v2.32H7.2v3.14h2.72V21z" />
-    </svg>
-  );
-}
-
 function YelpIcon() {
   return (
     <svg
@@ -85,15 +72,6 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://facebook.com/countrycollision"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linkClasses}
-            >
-              <FacebookIcon />
-              Facebook
-            </a>
-            <a
               href="https://www.yelp.com/biz/country-collision-hanford-2"
               target="_blank"
               rel="noopener noreferrer"
@@ -117,7 +95,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.5.0&nbsp;&nbsp;|&nbsp;&nbsp;August 17, 2026
+          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.5.1&nbsp;&nbsp;|&nbsp;&nbsp;September 25, 2026
         </p>
       </div>
     </footer>
