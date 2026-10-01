@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ImagePlaceholder from "./ImagePlaceholder";
 import MediaViewer from "./MediaViewer";
 
@@ -43,15 +42,11 @@ export default function ProjectCard({
       </p>
 
       {layout === "single" && image?.imageSrc ? (
-        <div className="relative mx-auto mt-6 aspect-square w-full max-w-3xl overflow-hidden rounded-lg">
-          <Image
-            src={image.imageSrc}
-            alt={image.label}
-            fill
-            sizes="(min-width: 768px) 48rem, 100vw"
-            className="object-cover"
-          />
-        </div>
+        <MediaViewer
+          items={[image]}
+          className="mx-auto mt-6 aspect-square w-full max-w-3xl"
+          sizes="(min-width: 768px) 48rem, 100vw"
+        />
       ) : layout === "collage" ? (
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
           {galleries.map((gallery) => (

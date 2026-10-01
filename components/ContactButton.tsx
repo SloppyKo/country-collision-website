@@ -8,12 +8,20 @@ type ContactButtonProps = {
   label: string;
   variant?: "primary" | "secondary";
   className?: string;
+  align?: "left" | "center" | "right";
+};
+
+const alignClasses = {
+  left: "left-0",
+  center: "left-1/2 -translate-x-1/2",
+  right: "right-0",
 };
 
 export default function ContactButton({
   label,
   variant = "primary",
   className = "",
+  align = "center",
 }: ContactButtonProps) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -55,7 +63,7 @@ export default function ContactButton({
       {open && (
         <div
           role="dialog"
-          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 rounded-md border border-border bg-surface p-4 text-center shadow-lg"
+          className={`absolute top-full z-50 mt-2 w-64 max-w-[calc(100vw-3rem)] ${alignClasses[align]} rounded-md border border-border bg-surface p-4 text-center shadow-lg`}
         >
           <p className="font-heading text-sm text-foreground">Shoot us a text or call</p>
           <a

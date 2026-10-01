@@ -37,7 +37,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <ContactButton label="Contact" />
+          <ContactButton label="Contact" align="right" />
         </nav>
 
         <button
@@ -77,7 +77,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <ContactButton label="Contact" />
+          <ContactButton label="Contact" align="left" />
         </nav>
       )}
 

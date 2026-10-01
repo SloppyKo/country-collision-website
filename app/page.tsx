@@ -55,6 +55,7 @@ export default function Home() {
             <ContactButton
               label="Contact"
               variant="primary"
+              align="left"
               className="px-8 py-4 text-xl font-bold shadow-lg shadow-brand/50"
             />
             <Button
