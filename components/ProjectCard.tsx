@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ImagePlaceholder from "./ImagePlaceholder";
 import MediaViewer from "./MediaViewer";
 
@@ -16,7 +17,8 @@ type ProjectCardProps = {
   description: string;
   media?: MediaItem[];
   galleries?: Gallery[];
-  layout?: "carousel" | "grid" | "collage";
+  image?: MediaItem;
+  layout?: "carousel" | "grid" | "collage" | "single";
   imageRow?: MediaItem[];
   imageRowTitle?: string;
 };
@@ -27,6 +29,7 @@ export default function ProjectCard({
   description,
   media = [],
   galleries = [],
+  image,
   layout = "carousel",
   imageRow,
   imageRowTitle,
@@ -39,7 +42,17 @@ export default function ProjectCard({
         {description}
       </p>
 
-      {layout === "collage" ? (
+      {layout === "single" && image?.imageSrc ? (
+        <div className="relative mx-auto mt-6 aspect-square w-full max-w-3xl overflow-hidden rounded-lg">
+          <Image
+            src={image.imageSrc}
+            alt={image.label}
+            fill
+            sizes="(min-width: 768px) 48rem, 100vw"
+            className="object-cover"
+          />
+        </div>
+      ) : layout === "collage" ? (
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
           {galleries.map((gallery) => (
             <div key={gallery.title}>

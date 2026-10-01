@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const projects = [
   {
+    title: "Ford Bronco Color Match",
+    tags: ["Custom Paint", "Body Work", "Color Matching"],
+    description: "Full color match on 6th gen Ford Bronco",
+    layout: "single" as const,
+    image: {
+      label: "Ford Bronco color match collage",
+      imageSrc: "/images/bronco/collage.JPG",
+    },
+  },
+  {
     title: "Dodge Cummins Full Restoration",
     tags: ["Custom Paint", "Body Work", "Color Matching"],
     description: "Brought a totaled second gen Dodge Cummins back to life with a ground up restoration and custom build.",

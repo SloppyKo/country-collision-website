@@ -30,7 +30,7 @@ const services = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="relative z-20">
         <video
           src="/images/videoplaceholder.mp4"
           poster="/images/videoplaceholder_poster.jpg"
