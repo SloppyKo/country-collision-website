@@ -25,6 +25,7 @@ const linkClasses =
 
 export default function ContactModal({ open, onClose }: ContactModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
@@ -36,6 +37,12 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
     if (open && !dialog.open) {
       dialog.showModal();
       document.body.style.overflow = "hidden";
+      // Only jump into the form on mouse devices; on phones it pops the keyboard over the modal.
+      if (window.matchMedia("(pointer: fine)").matches) {
+        nameRef.current?.focus();
+      } else {
+        (document.activeElement as HTMLElement | null)?.blur();
+      }
     } else if (!open && dialog.open) {
       dialog.close();
     }
@@ -87,12 +94,13 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
       aria-labelledby="contact-modal-title"
       className="m-auto w-[calc(100%-2rem)] max-w-4xl rounded-lg border border-border bg-surface p-0 text-left text-foreground shadow-2xl backdrop:bg-black/70 max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain"
     >
-      <div className="relative p-5 md:p-8">
+      {/* Zero-height sticky row keeps the close button reachable while the modal scrolls. */}
+      <div className="sticky top-0 z-10 flex h-0 justify-end">
         <button
           type="button"
           onClick={() => dialogRef.current?.close()}
           aria-label="Close"
-          className="absolute right-3 top-3 cursor-pointer rounded-md p-2 text-muted transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+          className="mr-1 mt-1 flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-md text-muted transition-colors hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-brand md:mr-2 md:mt-2"
         >
           <svg
             viewBox="0 0 24 24"
@@ -100,12 +108,15 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
             stroke="currentColor"
             strokeWidth={2}
             strokeLinecap="round"
-            className="h-5 w-5"
+            className="h-6 w-6"
             aria-hidden="true"
           >
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
+      </div>
+
+      <div className="p-5 md:p-8">
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-[2fr_3fr] md:gap-0">
           <div className="text-left md:pr-8">
@@ -160,8 +171,8 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                   <input
                     name="name"
                     type="text"
+                    ref={nameRef}
                     required
-                    autoFocus
                     autoComplete="name"
                     className={inputClasses}
                   />

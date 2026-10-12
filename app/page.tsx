@@ -83,7 +83,7 @@ export default function Home() {
 
       <section
         id="services"
-        className="mx-auto max-w-6xl scroll-mt-28 px-6 pb-16 pt-12"
+        className="mx-auto max-w-6xl scroll-mt-28 px-8 pb-16 pt-12 md:px-6"
       >
         <h2 className="font-heading text-4xl text-foreground md:text-6xl">
           Auto Body Services in Hanford

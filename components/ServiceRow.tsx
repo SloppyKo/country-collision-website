@@ -67,7 +67,7 @@ export default function ServiceRow({
       <div
         className={`overflow-hidden transition-all duration-300 md:group-hover:h-64 md:group-hover:w-[36rem] md:group-hover:opacity-100 ${
           open
-            ? "h-56 w-full opacity-100"
+            ? "h-40 w-full opacity-100 sm:h-56"
             : "h-0 w-full opacity-0 md:h-0 md:w-0"
         }`}
       >
@@ -78,7 +78,8 @@ export default function ServiceRow({
               alt={title}
               fill
               sizes="(min-width: 768px) 36rem, 100vw"
-              className="object-cover"
+              // Photos are wide before/after shots; contain keeps both halves visible on phones.
+              className="object-contain md:object-cover"
             />
           </div>
         ) : (
