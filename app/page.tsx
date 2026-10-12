@@ -6,22 +6,23 @@ import ServiceRow from "@/components/ServiceRow";
 
 const services = [
   {
-    title: "Collision Repair & Body Work",
+    title: "Auto Body & Collision Repair",
     description:
-      "From dents and scratches to collision damage, Country Collision restores body lines, panels, and hard to reach components.",
+      "From dents, scratches, and bumper damage to major collisions, Levi restores body lines, panels, and hard-to-reach components.",
     imageLabel: "white truck body work.png",
     imageSrc: "/images/white truck body work.png",
   },
   {
-    title: "Custom Paint & Paint Repair",
-    description: "Clean paintwork, accurate matching, and custom finishes.",
+    title: "Car Painting & Paint Matching",
+    description:
+      "Paint repair, accurate color matching, and custom finishes for daily drivers and show builds.",
     imageLabel: "meyers_max_paint.png",
     imageSrc: "/images/meyers_max_paint.png",
   },
   {
     title: "Auto Restoration & Custom Builds",
     description:
-      "Restoration and custom build work focused on bringing your vehicle back to life.",
+      "Classic restorations and custom builds. All done by hand from bodywork to final paint.",
     imageLabel: "truck bed.png",
     imageSrc: "/images/truck bed/truck bed.png",
   },
@@ -43,19 +44,21 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 py-24 text-center">
-          <h1 className="font-heading text-4xl leading-tight text-foreground md:text-6xl">
-            Collision Repair, Custom Paint, and Auto Restoration in Hanford,
-            California
+          <h1 className="font-heading text-5xl leading-tight text-foreground md:text-7xl">
+            Auto Body & Collision Repair in Hanford, California
           </h1>
-          <p className="mt-8 max-w-2xl font-body text-lg font-bold uppercase text-white">
+          <p className="mt-10 max-w-2xl font-body text-xl text-white md:text-2xl">
+            Hanford’s body shop for dent and bumper repair, car painting, auto
+            paint matching, and restorations across Kings County.
+          </p>
+          <p className="mt-12 max-w-2xl font-body text-lg font-light uppercase text-white">
             Restored by Hand | Painted with Pride | Finished Like It&apos;s
             Our Own
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <ContactButton
               label="Contact"
               variant="primary"
-              align="left"
               className="px-8 py-4 text-xl font-bold shadow-lg shadow-brand/50"
             />
             <Button
@@ -76,11 +79,11 @@ export default function Home() {
         className="mx-auto max-w-6xl scroll-mt-28 px-6 pb-16 pt-12"
       >
         <h2 className="font-heading text-4xl text-foreground md:text-6xl">
-          Services
+          Auto Body Services in Hanford
         </h2>
         <p className="mt-3 max-w-2xl font-body text-base text-muted">
-          Custom auto body, paint, and restoration work for drivers and auto enthusiasts across
-          Hanford and Kings County.
+          Full-service auto body shop for collision repair, car painting, and
+          restoration across Hanford and Kings County.
         </p>
 
         <div className="mt-12 divide-y divide-muted/30 border-y-2 border-muted/50">

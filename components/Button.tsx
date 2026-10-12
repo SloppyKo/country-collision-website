@@ -27,6 +27,7 @@ type ButtonProps = BaseProps & {
   href?: never;
   onClick?: () => void;
   type?: "button" | "submit";
+  disabled?: boolean;
 };
 
 export default function Button(props: LinkProps | ButtonProps) {
@@ -47,6 +48,7 @@ export default function Button(props: LinkProps | ButtonProps) {
     <button
       type={buttonProps.type ?? "button"}
       onClick={buttonProps.onClick}
+      disabled={buttonProps.disabled}
       className={classes}
     >
       {buttonProps.children}

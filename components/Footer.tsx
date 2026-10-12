@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FooterContact from "./FooterContact";
+import { HOURS, SERVICE_AREA } from "@/lib/contact";
 
 const linkClasses =
   "inline-flex items-center gap-1.5 font-body text-sm text-foreground underline underline-offset-4 transition-transform duration-150 hover:scale-105";
@@ -41,18 +42,17 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 pb-12 pt-20 text-center sm:grid-cols-3">
         <div className="flex flex-col items-center">
           <h3 className="font-heading text-lg text-foreground">Location</h3>
-          <p className="mt-3 font-body text-sm text-muted">
-            We&apos;re located in Hanford, California, and we serve clients in
-            the Kings County area.
-          </p>
+          <p className="mt-3 font-body text-sm text-muted">{SERVICE_AREA}</p>
         </div>
 
         <div className="flex flex-col items-center">
           <h3 className="font-heading text-lg text-foreground">Hours</h3>
           <p className="mt-3 font-body text-sm text-muted">
-            Monday - Friday 9am-7pm
-            <br />
-            Saturday - Sunday 9am-5pm
+            {HOURS.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </p>
           <FooterContact />
         </div>
@@ -95,7 +95,7 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          Built by SloppyKo. Creative Studio © 2026 All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;0.5.3&nbsp;&nbsp;|&nbsp;&nbsp;September 30, 2026
+          {`© ${new Date().getFullYear()} Country Collision. All rights reserved`}&nbsp;&nbsp;|&nbsp;&nbsp;Built by SloppyKo. Creative Studio
         </p>
       </div>
     </footer>

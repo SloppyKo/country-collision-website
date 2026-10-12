@@ -35,13 +35,11 @@ export default function LogoReveal() {
         className={`relative p-10 transition-all duration-1000 ease-out md:p-16 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
-        style={{
-          background:
-            "radial-gradient(ellipse at center, #000000 40%, rgba(0,0,0,0) 75%)",
-          ...(visible
+        style={
+          visible
             ? { animation: "logo-throb 3.5s ease-in-out infinite" }
-            : {}),
-        }}
+            : undefined
+        }
       >
         <Image
           src="/images/logo_final.png"

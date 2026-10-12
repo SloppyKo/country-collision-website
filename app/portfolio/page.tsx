@@ -4,33 +4,35 @@ import ContactButton from "@/components/ContactButton";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Country Collision | Hanford, CA",
+  title: "Auto Body & Paint Work in Hanford, CA | Country Collision",
   description:
-    "See our collision repair, custom paint, and restoration work from Country Collision in Hanford, California.",
+    "Before-and-after collision repair, paint matching, and restoration work from Hanford, CA, including a totaled Dodge Cummins rebuild and a Ford Bronco color match.",
 };
 
 const projects = [
   {
-    title: "Ford Bronco Color Match",
-    tags: ["Custom Paint", "Body Work", "Color Matching"],
-    description: "Full color match on 6th gen Ford Bronco",
+    title: "Ford Bronco Paint Matching",
+    tags: ["Paint Matching", "Car Painting", "Body Work"],
+    description:
+      "Full paint color match on a 6th-gen Ford Bronco, from bodywork prep to final finish.",
     layout: "single" as const,
     image: {
-      label: "Ford Bronco color match collage",
+      label: "6th-gen Ford Bronco paint color match",
       imageSrc: "/images/bronco/collage.JPG",
     },
   },
   {
-    title: "Dodge Cummins Full Restoration",
-    tags: ["Custom Paint", "Body Work", "Color Matching"],
-    description: "Brought a totaled second gen Dodge Cummins back to life with a ground up restoration and custom build.",
+    title: "Totaled Dodge Cummins Collision Repair & Restoration",
+    tags: ["Collision Repair", "Auto Restoration", "Custom Paint"],
+    description:
+      "Brought a totaled 2nd-gen Dodge Cummins back to life with collision repair, a ground-up restoration, and a custom build.",
     layout: "collage" as const,
     galleries: [
       {
         title: "Totaled",
         items: [
           {
-            label: "dodge wrecked",
+            label: "Totaled 2nd-gen Dodge Cummins before collision repair",
             imageSrc: "/images/dodge restoration/dodge wrecked.PNG",
           },
         ],
@@ -39,23 +41,23 @@ const projects = [
         title: "Prep",
         items: [
           {
-            label: "dodge restoration 3",
+            label: "Dodge Cummins body and paint prep, photo 1",
             imageSrc: "/images/dodge restoration/dodge restoration  3.png",
           },
           {
-            label: "dodge restoration 4",
+            label: "Dodge Cummins body and paint prep, photo 2",
             imageSrc: "/images/dodge restoration/dodge restoration  4.png",
           },
           {
-            label: "dodge restoration 2",
+            label: "Dodge Cummins body and paint prep, photo 3",
             imageSrc: "/images/dodge restoration/dodge restoration  2.png",
           },
           {
-            label: "dodge restoration 5",
+            label: "Dodge Cummins body and paint prep, photo 4",
             imageSrc: "/images/dodge restoration/dodge restoration  5.png",
           },
           {
-            label: "dodge restoration 1",
+            label: "Dodge Cummins body and paint prep, photo 5",
             imageSrc: "/images/dodge restoration/dodge restoration  1.png",
           },
         ],
@@ -64,11 +66,11 @@ const projects = [
         title: "Restored",
         items: [
           {
-            label: "dodge final 1",
+            label: "Restored Dodge Cummins with custom paint, photo 1",
             imageSrc: "/images/dodge restoration/dodge final 1.jpeg",
           },
           {
-            label: "dodge final 2",
+            label: "Restored Dodge Cummins with custom paint, photo 2",
             imageSrc: "/images/dodge restoration/dodge final 2.png",
           },
         ],
@@ -76,17 +78,17 @@ const projects = [
     ],
   },
   {
-    title: "Chevy Impala Restoration + Paint Refresh",
-    tags: ["Custom Paint", "Rust Restoration", "Body Work"],
+    title: "1963 Chevy Impala Rust Repair & Repaint",
+    tags: ["Rust Repair", "Bumper Repair", "Car Painting"],
     description:
-      "Repaired a busted bumper and rusted quarter panels, added a custom antenna, and repainated a 1963 Chevy Impala.",
+      "Repaired a damaged bumper and rusted quarter panels, added a custom antenna, and repainted a classic 1963 Chevy Impala.",
     layout: "collage" as const,
     galleries: [
       {
         title: "Bumper/Rust Repair",
         items: [
           {
-            label: "impala bumper prep",
+            label: "1963 Chevy Impala bumper and rust repair",
             videoSrc: "/images/impala/impala bumper prep.mp4",
             posterSrc: "/images/impala/impala bumper prep_poster.jpg",
           },
@@ -96,7 +98,7 @@ const projects = [
         title: "Antenna Prep",
         items: [
           {
-            label: "impala antenna prep",
+            label: "1963 Chevy Impala custom antenna prep",
             videoSrc: "/images/impala/impala atenna prep.mp4",
             posterSrc: "/images/impala/impala atenna prep_poster.jpg",
           },
@@ -106,7 +108,7 @@ const projects = [
         title: "Restored",
         items: [
           {
-            label: "impala bumper final",
+            label: "Restored 1963 Chevy Impala bumper after repaint",
             videoSrc: "/images/impala/impala bumper final.mp4",
             posterSrc: "/images/impala/impala bumper final_poster.jpg",
           },
@@ -115,17 +117,17 @@ const projects = [
     ],
   },
   {
-    title: "OBS Chevy, Peterbilt, and Trailer Paint Job",
-    tags: ["Custom Paint", "Rust Repair", "Color matching"],
+    title: "1989 Chevy OBS, Peterbilt & Trailer Paint Matching",
+    tags: ["Paint Matching", "Truck Painting", "Rust Repair"],
     description:
-      "Minor body work and restored the orignal baby blue paint on a 1989 Chevy OBS short bed pickup truck + colormatched custom paint on Peterbilt semi-truck and trailer.",
+      "Minor body work and restored the original baby blue paint on a 1989 Chevy OBS short bed pickup, plus color-matched custom paint on a Peterbilt semi-truck and trailer.",
     layout: "collage" as const,
     galleries: [
       {
         title: "OBS Before",
         items: [
           {
-            label: "OBS before",
+            label: "1989 Chevy OBS pickup before paint restoration",
             videoSrc: "/images/obs repaint/OBS before_square.mp4",
             posterSrc: "/images/obs repaint/OBS before_square_poster.jpg",
           },
@@ -135,7 +137,7 @@ const projects = [
         title: "OBS Prep",
         items: [
           {
-            label: "OBS prep",
+            label: "1989 Chevy OBS pickup body and paint prep",
             videoSrc: "/images/obs repaint/OBS prep_square.mp4",
             posterSrc: "/images/obs repaint/OBS prep_square_poster.jpg",
           },
@@ -145,7 +147,7 @@ const projects = [
         title: "OBS Restored",
         items: [
           {
-            label: "OBS final",
+            label: "1989 Chevy OBS pickup restored in original baby blue",
             videoSrc: "/images/obs repaint/OBS final_square.mp4",
             posterSrc: "/images/obs repaint/OBS final_square_poster.jpg",
           },
@@ -155,19 +157,19 @@ const projects = [
     imageRowTitle: "OBS, Peterbilt, & Trailer Fully Restored",
     imageRow: [
       {
-        label: "peterbilt full",
+        label: "Peterbilt semi-truck with color-matched custom paint",
         imageSrc: "/images/obs repaint/peterbilt full.jpg",
       },
       {
-        label: "OBS on trailer",
+        label: "Restored 1989 Chevy OBS on color-matched trailer",
         imageSrc: "/images/obs repaint/OBS on trailer.jpg",
       },
       {
-        label: "peterbilt side",
+        label: "Peterbilt semi-truck custom paint, side view",
         imageSrc: "/images/obs repaint/peterbilt side.jpg",
       },
       {
-        label: "OBS side",
+        label: "Restored 1989 Chevy OBS pickup, side view",
         imageSrc: "/images/obs repaint/OBS side.jpg",
       },
     ],
@@ -191,7 +193,7 @@ export default function Portfolio() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-16">
           <h1 className="font-heading text-3xl text-white md:text-5xl">
-            Featured Work
+            Auto Body & Paint Projects in Hanford
           </h1>
           <p className="mt-3 max-w-2xl font-body text-base text-white/80">
             Our most memorable bodywork, custom paint, and restoration projects

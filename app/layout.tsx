@@ -18,8 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.countrycollisionhanford.com"),
-  title: "Country Collision — Collision Repair, Custom Paint & Auto Restoration in Hanford, CA",
-  description: "Collision Repair, Custom Paint, and Auto Restoration in Hanford California.",
+  title: "Auto Body & Collision Repair in Hanford, CA | Country Collision",
+  description:
+    "Hanford's body shop for auto body, collision repair, and car painting. Owner-operated by Levi Herman. Call (559) 670-5889 for an estimate.",
 };
 
 export default function RootLayout({
