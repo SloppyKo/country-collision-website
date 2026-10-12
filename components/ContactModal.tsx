@@ -85,9 +85,9 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
         if (event.target === dialogRef.current) dialogRef.current.close();
       }}
       aria-labelledby="contact-modal-title"
-      className="m-auto w-[calc(100%-2rem)] max-w-4xl rounded-lg border border-border bg-surface p-0 text-left text-foreground shadow-2xl backdrop:bg-black/70"
+      className="m-auto w-[calc(100%-2rem)] max-w-4xl rounded-lg border border-border bg-surface p-0 text-left text-foreground shadow-2xl backdrop:bg-black/70 max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain"
     >
-      <div className="relative p-6 md:p-8">
+      <div className="relative p-5 md:p-8">
         <button
           type="button"
           onClick={() => dialogRef.current?.close()}
@@ -107,7 +107,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
           </svg>
         </button>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-[2fr_3fr] md:gap-0">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-[2fr_3fr] md:gap-0">
           <div className="text-left md:pr-8">
             <h2
               id="contact-modal-title"
@@ -116,7 +116,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               Contact Us
             </h2>
 
-            <h3 className="mt-10 font-heading text-lg text-foreground">Hours</h3>
+            <h3 className="mt-5 font-heading text-lg text-foreground md:mt-10">Hours</h3>
             <p className="mt-1 font-body text-sm text-muted">
               {HOURS.map((line) => (
                 <span key={line} className="block">
@@ -125,25 +125,25 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
               ))}
             </p>
 
-            <h3 className="mt-8 font-heading text-lg text-foreground">
+            <h3 className="mt-4 font-heading text-lg text-foreground md:mt-8">
               Location
             </h3>
             <p className="mt-1 font-body text-sm text-muted">{SERVICE_AREA}</p>
 
-            <h3 className="mt-8 font-heading text-lg text-foreground">
+            <h3 className="mt-4 font-heading text-lg text-foreground md:mt-8">
               Call or Text
             </h3>
             <a href={PHONE_HREF} className={linkClasses}>
               {PHONE_DISPLAY}
             </a>
 
-            <h3 className="mt-8 font-heading text-lg text-foreground">Email</h3>
+            <h3 className="mt-4 font-heading text-lg text-foreground md:mt-8">Email</h3>
             <a href={EMAIL_HREF} className={`${linkClasses} break-all`}>
               {EMAIL_DISPLAY}
             </a>
           </div>
 
-          <div className="border-t border-border pt-8 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+          <div className="border-t border-border pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
             {sent ? (
               <div className="flex h-full flex-col items-start justify-center text-left">
                 <h3 className="font-heading text-2xl text-foreground">
@@ -154,7 +154,7 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-4">
                 <label className={labelClasses}>
                   Name
                   <input
@@ -189,8 +189,8 @@ export default function ContactModal({ open, onClose }: ContactModalProps) {
                   <textarea
                     name="message"
                     required
-                    rows={4}
-                    className={`${inputClasses} resize-y`}
+                    rows={3}
+                    className={`${inputClasses} resize-y md:min-h-28`}
                   />
                 </label>
 

@@ -84,7 +84,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-2 pb-5 pt-6">
+      {/* Extra bottom padding below lg keeps the floating review button off this text. */}
+      <div className="flex flex-col items-center gap-2 px-6 pb-24 pt-6 lg:pb-6">
         <a href="https://www.sloppyko.com" target="_blank" rel="noopener noreferrer">
           <Image
             src="/images/bs_white.png"
@@ -95,7 +96,13 @@ export default function Footer() {
           />
         </a>
         <p className="text-center font-body text-[0.55rem] tracking-[0.04em] text-[#5c5c5c]">
-          {`© ${new Date().getFullYear()} Country Collision. All rights reserved`}&nbsp;&nbsp;|&nbsp;&nbsp;Built by SloppyKo. Creative Studio
+          <span className="block sm:inline">
+            {`© ${new Date().getFullYear()} Country Collision. All rights reserved`}
+          </span>
+          <span className="hidden sm:inline">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span className="mt-1 block sm:mt-0 sm:inline">
+            Built by SloppyKo. Creative Studio
+          </span>
         </p>
       </div>
     </footer>

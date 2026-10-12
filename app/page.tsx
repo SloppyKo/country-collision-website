@@ -33,7 +33,6 @@ export default function Home() {
     <>
       <section className="relative z-20">
         <video
-          src="/images/videoplaceholder.mp4"
           poster="/images/videoplaceholder_poster.jpg"
           autoPlay
           loop
@@ -41,7 +40,15 @@ export default function Home() {
           playsInline
           preload="auto"
           className="absolute inset-0 h-full w-full object-cover opacity-[0.7]"
-        />
+        >
+          {/* Phones get a pre-cropped portrait version (~0.9MB vs ~3.1MB). */}
+          <source
+            src="/images/videoplaceholder_mobile.mp4"
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          <source src="/images/videoplaceholder.mp4" type="video/mp4" />
+        </video>
 
         <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 py-24 text-center">
           <h1 className="font-heading text-5xl leading-tight text-foreground md:text-7xl">
